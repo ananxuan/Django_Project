@@ -36,3 +36,6 @@ def db_handle(request):
                                        age=request.POST['age'])
     user_list_obj = models.UserInfo.objects.all()
     return render(request,'t1.html',{'li':user_list_obj})
+    
+#show all reuqest.META data
+def dispaly_meta

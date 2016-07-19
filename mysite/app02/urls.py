@@ -21,4 +21,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^home/', views.home),
     url(r'^db_handle/', views.db_handle),
+    url(r'^search-form/', views.search_form),
 ]

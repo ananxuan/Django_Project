@@ -37,15 +37,3 @@ def db_handle(request):
     user_list_obj = models.UserInfo.objects.all()
     return render(request,'t1.html',{'li':user_list_obj})
     
-#show all reuqest.META data
-def dispaly_meta(request):
-    values = request.META.items()
-    values.sort()
-    html = []
-    for k,v in values:
-        html.append('<tr><td>%s</td></tr>'%(k,v))
-    return HttpResponse('<table>%s</table>' % '\n'.join(html))
-
-#create a search chart
-def search_form(request):
-    return render_to_response('search_form.html')

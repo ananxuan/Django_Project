@@ -1,4 +1,4 @@
-from django.shortcuts import render,HttpResponse
+from django.shortcuts import render,HttpResponse,render_to_reponse
 from app02 import models
 
 
@@ -43,5 +43,9 @@ def dispaly_meta(request):
     values.sort()
     html = []
     for k,v in values:
-        html.append
-    
+        html.append('<tr><td>%s</td></tr>'%(k,v))
+    return HttpResponse('<table>%s</table>' % '\n'.join(html))
+
+#create a search chart
+def search_form(request):
+    return render_to_response('search_form.html')

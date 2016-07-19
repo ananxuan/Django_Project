@@ -38,4 +38,10 @@ def db_handle(request):
     return render(request,'t1.html',{'li':user_list_obj})
     
 #show all reuqest.META data
-def dispaly_meta
+def dispaly_meta(request):
+    values = request.META.items()
+    values.sort()
+    html = []
+    for k,v in values:
+        html.append
+    
